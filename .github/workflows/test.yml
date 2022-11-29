@@ -15,7 +15,7 @@ jobs:
       - id: job-summary-url
         uses: ./job-summary-url
         with:
-          job: '${{ github.job }} (${{ matrix.os }})'
+          job: 'Use Action (${{ matrix.os }})'
       - run: |
           test -n '${{ steps.job-summary-url.outputs.run_url }}'
           test -n '${{ steps.job-summary-url.outputs.job_url }}'

@@ -4,6 +4,8 @@ The action calculates the permalink to the job summary for a given job ID. It al
 
 If no inputs are provided, the action will calculate the URLs for the currently runnnig job.
 
+_NOTE_: `github.job`, the default for the `job` parameter, refers to the job ID rather than its' name. That's why it is quite likely you will have to provide the job name explicitly. See [the test](.github/workflows/test.yml) for example.
+
 ## Inputs
 
 | Name | Description | Required | Default |
@@ -13,7 +15,7 @@ If no inputs are provided, the action will calculate the URLs for the currently 
 | workflow | The name or the id of the workflow. Defaults to `GITHUB_WORKFLOW`. | true | github.workflow |
 | run_id | The id of the workflow run. Or `latest`. Defaults to `GITHUB_RUN_ID`. | true | github.run_id |
 | run_attempt | The number of the attempt of the workflow run. Or `latest`. Defaults to `GITHUB_RUN_ATTEMPT`. | true | github.run_attempt |
-| job | A unique string for the workflow run job. Or `latest`. Defaults to `latest`. | true | github.job |
+| job | A unique string for the workflow run job. Or `latest`. Defaults to `GITHUB_JOB`. | true | github.job |
 
 ## Outputs
 

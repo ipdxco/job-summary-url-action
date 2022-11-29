@@ -27,5 +27,8 @@ If no inputs are provided, the action will calculate the URLs for the currently 
 ## Example
 
 ```
-- uses: pl-strflt/export-job-urls@v1
+- id: exp
+  uses: pl-strflt/export-job-urls@v1
+- run: echo '${{ steps.exp.outputs.job_summary_url }}'
+  shell: bash
 ```

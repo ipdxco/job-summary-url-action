@@ -14,6 +14,8 @@ jobs:
           path: job-summary-url
       - id: job-summary-url
         uses: ./job-summary-url
+        with:
+          job: '${{ github.job }} (${{ matrix.os }})'
       - run: |
           test -n '${{ steps.job-summary-url.outputs.run_url }}'
           test -n '${{ steps.job-summary-url.outputs.job_url }}'

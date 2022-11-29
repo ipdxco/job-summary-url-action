@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths: [CHANGELOG.md]
-    branches: [master]
+    branches: [main]
 jobs:
   Publish:
     name: Publish

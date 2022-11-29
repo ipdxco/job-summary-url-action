@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: job-summary-url-action
+          path: job-summary-url
       - id: job-summary-url
         uses: ./job-summary-url
       - run: |

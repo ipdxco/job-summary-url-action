@@ -1,8 +1,8 @@
 name: Pre Release
-on: 
+on:
   pull_request:
     paths: [CHANGELOG.md]
-    branches: [master]
+    branches: [main]
 jobs:
   Post-Comment:
     name: Post Comment

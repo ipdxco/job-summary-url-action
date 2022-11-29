@@ -91,11 +91,12 @@ runs:
 
           let job
           if (JOB === LATEST) {
-            console.log('picking latest')
             job = jobs.data.jobs[jobs.data.jobs.length - 1]
           } else {
-            console.log('looking for job name')
             job = jobs.data.jobs.find(j => j.name === JOB)
+            if (job === undefined) {
+              throw new Error(`Couldn't find '${JOB}' among ${jobs.data.jobs.map(j => `'${j.name}'`).join(', ')}`)
+            }
           }
 
           const run_url = `${SERVER_URL}/${REPOSITORY}/actions/runs/${RUN_ID}/attempts/${RUN_ATTEMPT}`

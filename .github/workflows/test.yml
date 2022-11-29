@@ -1,0 +1,22 @@
+name: Test
+on: [push]
+jobs:
+  Use-Action:
+    name: Use Action
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: job-summary-url-action
+      - id: job-summary-url
+        uses: ./job-summary-url
+      - run: |
+          test -n '${{ steps.job-summary-url.outputs.run_url }}'
+          test -n '${{ steps.job-summary-url.outputs.job_url }}'
+          test -n '${{ steps.job-summary-url.outputs.job_summary_url }}'
+          test -n '${{ steps.job-summary-url.outputs.job_summary_raw_url }}'
+        shell: bash

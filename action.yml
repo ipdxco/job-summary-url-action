@@ -1,6 +1,8 @@
 name: Job Summary URL
 description: Calculates the job summary URL and other job related URLs which are not available by default
-
+branding:
+  icon: award
+  color: green
 inputs:
   repository:
     description: 'The owner and repository name. Defaults to `GITHUB_REPOSITORY`.'

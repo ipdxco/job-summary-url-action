@@ -1,5 +1,5 @@
-name: Test
-on: [push]
+tên : Kiểm tra
+bật : [ đẩy ]
 jobs:
   Use-Action:
     name: Use Action

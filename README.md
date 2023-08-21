@@ -30,7 +30,7 @@ _NOTE_: `github.job`, the default for the `job` parameter, refers to the job ID 
 
 ```
 - id: exp
-  uses: pl-strflt/export-job-urls@v1
+  uses: pl-strflt/job-summary-url-action@v1
 - run: echo '${{ steps.exp.outputs.job_summary_url }}'
   shell: bash
 ```

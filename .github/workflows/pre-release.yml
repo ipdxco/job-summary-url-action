@@ -20,7 +20,7 @@ jobs:
           fi
         shell: bash
       - if: ${{ env.TAG != '' }}
-        uses: marocchino/sticky-pull-request-comment@f61b6cf21ef2fcc468f4345cdfcc9bda741d2343 # v2.6.2
+        uses: marocchino/sticky-pull-request-comment@efaaab3fd41a9c3de579aba759d2552635e590fd # v2.8.0
         with:
           header: pre-release
           recreate: true

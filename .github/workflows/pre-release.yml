@@ -8,7 +8,7 @@ jobs:
     name: Post Comment
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - run: |
           source .github/scripts/changelog.sh
           git fetch origin --tags
